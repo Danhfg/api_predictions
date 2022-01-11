@@ -15,7 +15,7 @@ for algoritmo in classe_modelos:
     modelos[algoritmo] = (joblib.load('modelos/modelo_ia'+algoritmo+'.pyobj'))
 
 app = Flask(__name__)
-app.run(debug=False)
+app.run(debug=False,port=5050)
 
 @app.route('/results',methods=['POST'])
 def getResults():
